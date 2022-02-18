@@ -1,5 +1,4 @@
 import './js/main';
-
-'use strict';
+import './css/style.css';
 
 console.log("Hello World");
