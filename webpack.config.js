@@ -6,68 +6,88 @@ module.exports = {
   entry: "./src/index.js",
   output: {
     path: path.resolve(__dirname, "./dist"),
-    filename: "main.bundle.js",
+    filename: "js/main.bundle.js",
+    assetModuleFilename: "assets/[hash][ext][query]",
     clean: true,
   },
-
   module: {
     rules: [
-        // MiniCssExtractPlugin
-         {
-         test: /\.s[ac]ss$/i,
-         use: [
-            MiniCssExtractPlugin.loader,
-            "css-loader",
-            {
-               loader: "postcss-loader",
-               options: {
-               postcssOptions: {
-                  plugins: [
-                     [
-                     "postcss-preset-env",
-                     {
-                        // Options
-                     },
-                     ],
+      // Html Loader
+      {
+         test: /\.html$/i,
+         loader: "html-loader",
+       },
+      // MiniCssExtractPlugin
+      {
+        test: /\.s[ac]ss$/i,
+        use: [
+          MiniCssExtractPlugin.loader,
+          "css-loader",
+          {
+            loader: "postcss-loader",
+            options: {
+              postcssOptions: {
+                plugins: [
+                  [
+                    "postcss-preset-env",
+                    {
+                      // Options
+                    },
                   ],
-               },
-               },
+                ],
+              },
             },
-            "sass-loader",
-         ],
-         },
-         {
-         test: /\.css$/i,
-         use: [MiniCssExtractPlugin.loader, "css-loader"],
-         },
-      ],
-},
+          },
+          "sass-loader",
+        ],
+      },
+      {
+        test: /\.css$/i,
+        use: [MiniCssExtractPlugin.loader, "css-loader"],
+      },
+      // Images
+      {
+        test: /\.(png|svg|jpg|jpeg|gif)$/i,
+        type: "asset/resource",
+      },
+      // for svg
+      {
+        test: /\.svg/,
+        type: "asset/inline",
+      },
+      // Fonts
+      {
+         test: /\.(woff|woff2|eot|ttf|otf)$/i,
+         type: 'asset/resource',
+       },
+    ],
+  },
 
-plugins: [
-   new MiniCssExtractPlugin({
-      // filename: "style.bundle.css",  
-      filename: '[name].[contenthash].css'
-   }),
+  plugins: [
+    new MiniCssExtractPlugin({
+      // filename: "style.bundle.css",
+      filename: "css/[name].[contenthash].css",
+    }),
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
   ],
 
   devServer: {
-   hot: true,
-   open: true,
-   static: {
-     directory: path.join(__dirname, "./src"),
-     watch: true,
-   },
-   client: {
-     overlay: true,
-     // overlay: {
-     //   errors: true,
-     //   warnings: false,
-     // },
-   },
-   compress: true,
-   port: 9000,
- },
+    hot: true,
+    open: true,
+    static: {
+      directory: path.join(__dirname, "./src"),
+      watch: true,
+    },
+    client: {
+      overlay: true,
+      // overlay: {
+      //   errors: true,
+      //   warnings: false,
+      // },
+    },
+    compress: true,
+    port: 9000,
+  },
 };
