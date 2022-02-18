@@ -50,5 +50,23 @@ plugins: [
     new HtmlWebpackPlugin({
       template: "./src/index.html",
     }),
-  ]
+  ],
+
+  devServer: {
+   hot: true,
+   open: true,
+   static: {
+     directory: path.join(__dirname, "./src"),
+     watch: true,
+   },
+   client: {
+     overlay: true,
+     // overlay: {
+     //   errors: true,
+     //   warnings: false,
+     // },
+   },
+   compress: true,
+   port: 9000,
+ },
 };
