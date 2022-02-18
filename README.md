@@ -3,7 +3,7 @@
 
 #<span style="color:DarkSlateBlue">Webpack 5 Starter Template ( lite ) v1.0.1</span>
 ---
-##<span style="color:Teal"> Minifying your code is easy </span>
+##Minifying your code is easy
 ---
 
 <span style="color:">| Html Sass / Scss | DevServer | Babel | Autoprefixer |</span>
