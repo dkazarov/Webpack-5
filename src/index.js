@@ -1,4 +1,6 @@
 import './js/main';
 import './scss/style.scss';
 
-console.log("Hello World");
+import { str } from '../src/js/main';
+
+console.log(str);

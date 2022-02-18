@@ -60,6 +60,7 @@ module.exports = {
          test: /\.(woff|woff2|eot|ttf|otf)$/i,
          type: 'asset/resource',
        },
+       //babel
        {
         test: /\.m?js$/,
         exclude: /(node_modules|bower_components)/,
@@ -82,7 +83,7 @@ module.exports = {
       template: "./src/index.html",
     }),
   ],
-
+  // Dev Server
   devServer: {
     hot: true,
     open: true,
