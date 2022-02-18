@@ -1,12 +1,12 @@
 ![Webpack image](https://github.com/webpack/media/blob/master/logo/logo-on-white-bg.jpg?raw=true)
 ---
 
-#<span style="color:DarkSlateBlue">Webpack 5 Starter Template ( lite ) v1.0.1</span>
+Webpack 5 Starter Template ( lite ) v1.0.1
 ---
-##Minifying your code is easy
+Minifying your code is easy
 ---
 
-<span style="color:">| Html Sass / Scss | DevServer | Babel | Autoprefixer |</span>
+| Html Sass / Scss | DevServer | Babel | Autoprefixer |
 ---
 Clone the repo Run npm i to install dependencies Run commands in terminal:
 
