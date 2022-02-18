@@ -1,7 +1,7 @@
 ![Webpack image](https://github.com/webpack/media/blob/master/logo/logo-on-white-bg.jpg?raw=true)
 ---
 
-#Webpack 5 Starter Template ( lite ) v1.0.1
+Webpack 5 Starter Template ( lite ) v1.0.1
 ---
 ## Minifying your code is easy
 ---
