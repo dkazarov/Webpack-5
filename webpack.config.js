@@ -88,7 +88,7 @@ module.exports = {
     hot: true,
     open: true,
     static: {
-      directory: path.join(__dirname, "./src"),
+      directory: path.join(__dirname, "./dist"),
       watch: true,
     },
     client: {
