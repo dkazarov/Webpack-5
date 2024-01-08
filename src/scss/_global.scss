@@ -28,8 +28,11 @@ body {
   background-color: khaki;
 }
 
-.container{
+.container {
   max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
+}
+.footer {
+  flex: 0 0 auto;
 }
